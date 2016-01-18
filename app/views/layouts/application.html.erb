@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'navbar' %>
-<%= yield %>
-
+  <%= render 'shared/navbar' %>
+  <%= yield %>
+  <%= link_to "Admin?", login_path %>
 </body>
 </html>
