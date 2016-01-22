@@ -1,3 +1,4 @@
+<div class="container login">
 <% flash.each do |key, value| %>
   <div class="alert alert-<%= key %>"><%= value.capitalize %>!</div>
 <% end %>
@@ -11,3 +12,4 @@
 
   <%= submit_tag "Login", class: "btn btn-default" %>
 <% end %>
+</div>
