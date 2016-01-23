@@ -1,0 +1,9 @@
+<div class="login">
+  <%= form_for Post.new do |f| %>
+    Title: <%= f.text_field :title %><br />
+    Content: <%= f.text_area :content %><br />
+    Category: <%= f.text_field :category %><br />
+    Date: <%= f.text_field :date %><br />
+    <%= f.submit %>
+  <% end %>
+</div>
