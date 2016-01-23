@@ -7,7 +7,9 @@ Rails.application.routes.draw do
 
   resources :admins
   resources :projects
+  resources :posts
 
+  get 'portfolio' => 'admins#portfolio'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'

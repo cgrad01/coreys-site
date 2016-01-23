@@ -1,0 +1,17 @@
+<div class="container login">
+  <p> Welcome <%= @admin.fullname%>, manage your portfolio below.</p>
+</div>
+<div>
+  <h2> Projects </h2>
+  <% @admin.projects.each do |project| %>
+    <%= link_to "Edit #{project.name}", edit_project_path %>
+  <% end %>
+  <%= link_to "Create new project", new_project_path %>
+</div>
+<div>
+  <h2>Posts</h2>
+  <% @admin.posts.each do |post| %>
+    <%= link_to "Edit #{post.name}", edit_post_path %>
+  <% end %>
+  <%= link_to "Create new post", new_post_path %>
+</div>
