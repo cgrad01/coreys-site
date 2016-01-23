@@ -11,7 +11,7 @@
 <div>
   <h2>Posts</h2>
   <% @admin.posts.each do |post| %>
-    <%= link_to "Edit #{post.name}", edit_post_path %>
+    <p><%= link_to "Edit #{post.title}", edit_post_path(post) %></p>
   <% end %>
   <%= link_to "Create new post", new_post_path %>
 </div>
