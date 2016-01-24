@@ -1,0 +1,19 @@
+<div class="row posts">
+  <div class="col-md-6">
+    <h3>Cultural Posts</h3>
+    <ul>
+      <% Post.filter_posts("Technical").each do |post| %>
+      <li><%= link_to "#{post.title} - #{post.date}", post_path(post)%></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
+    <h3>Technical Posts</h3>
+    <ul>
+      <% Post.filter_posts("Technical").each do |post| %>
+      <li><%= link_to "#{post.title} - #{post.date}", post_path(post)%></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
