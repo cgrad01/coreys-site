@@ -1,0 +1,10 @@
+<div class="container login">
+  <%= form_for Project.new do |f| %>
+    <p>Title: <%= f.text_field :title %></p>
+    <p>Description: <%= f.text_area :description %></p>
+    <p>URL: <%= f.text_field :url %></p>
+    <p>Github Repo: <%= f.text_field :github %></p>
+    <p>Date: <%= f.text_field :date %></p>
+    <%= f.submit %>
+  <% end %>
+</div>
