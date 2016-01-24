@@ -13,6 +13,21 @@ class PostsController < ApplicationController
       end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post
+      @post.update_attributes(post_params)
+      redirect_to portfolio_path
+    else
+      @errors = @post.errors.full_messages
+      render :edit
+    end
+  end
+
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
