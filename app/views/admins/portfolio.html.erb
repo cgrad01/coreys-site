@@ -4,14 +4,14 @@
 <div class="container">
   <h2> Projects </h2>
   <% @admin.projects.each do |project| %>
-    <p><%= link_to "Edit #{project.title}", edit_project_path(project) %></p>
+    <p><%= link_to "Edit #{project.title}", edit_project_path(project) %><%= button_to "Delete", project, :method => :delete %></p>
   <% end %>
   <%= link_to "Create new project", new_project_path %>
 </div>
 <div class="container">
   <h2>Posts</h2>
   <% @admin.posts.each do |post| %>
-    <p><%= link_to "Edit #{post.title}", edit_post_path(post) %></p>
+    <p><%= link_to "Edit #{post.title}", edit_post_path(post) %><%= button_to "Delete", post, :method => :delete %></p>
   <% end %>
   <%= link_to "Create new post", new_post_path %>
 </div>
