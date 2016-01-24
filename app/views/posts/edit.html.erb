@@ -1,0 +1,9 @@
+<div class="container login">
+  <%= form_for(@post) do |f| %>
+    <p>Title: <%= f.text_field :title %></p>
+    <p>Content: <%= f.text_area :content %></p>
+    <p>Category: <%= f.text_field :category %></p>
+    <p>Date: <%= f.text_field :date %></p>
+    <%= f.submit %>
+  <% end %>
+</div>
