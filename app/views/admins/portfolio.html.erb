@@ -8,7 +8,7 @@
   <% end %>
   <%= link_to "Create new project", new_project_path %>
 </div>
-<div class="container">
+<div class="container posts">
   <h2>Posts</h2>
   <% @admin.posts.each do |post| %>
     <p><%= link_to "Edit #{post.title}", edit_post_path(post) %><%= button_to "Delete", post, :method => :delete %></p>
