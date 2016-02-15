@@ -1,4 +1,7 @@
 <a name="resume" id="resume"></a><h2 id="resume-header">RESUME</h2>
 <div class="container-fluid">
-  <embed id="resume-embed" src=<%= image_url('corey_resume.pdf') %> width="80%" height="1400px">
+  <button type="button" id="resume-btn" class="btn btn-info" data-toggle="collapse" data-target="#resume-container">View Resume</button>
+  <div id="resume-container" class="collapse">
+    <embed id="resume-embed" src=<%= image_url('corey_resume.pdf') %> width="80%" height="1400px">
+  </div>
 </div>
