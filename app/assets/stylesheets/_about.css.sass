@@ -1,14 +1,27 @@
-.pic
-  float: left
-  margin-right: 20px
+@import master
 
 .jumbotron
-  height: 500px
-  margin: -10px
+  background-image: url("old-roof.jpg")
+  background-repeat: no-repeat
+  background-size: 100%
+  background-position: right bottom
+  height: 1500px
+  margin: 0px
+  padding: 0px
 
 #blurb
-  font-size: 36px
+  font-size: 2vw
   text-align: justify
-  padding-top: 65px
+  color: $cyan
+  padding-top: 25%
+  opacity: 0.0
 
+#shadesquare
+  height: 100%
+  width: 100%
 
+#shadesquare:hover
+  background: $grey
+  opacity: 0.8
+  #blurb
+    opacity: 1.0
