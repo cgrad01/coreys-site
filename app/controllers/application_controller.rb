@@ -4,13 +4,13 @@ class ApplicationController < ActionController::Base
 
   $corey = Admin.find_by(fullname: "Corey Grad")
 
-  # def find_admin
-  #   find_admin ||= Admin.find_by(id: session[:admin_id])
-  # end
+  def find_admin
+    find_admin ||= Admin.find_by(id: session[:admin_id])
+  end
 
-  # def logged_in?
-  #   !!find_admin
-  # end
+  def logged_in?
+    !!find_admin
+  end
 
   protect_from_forgery with: :exception
 end
