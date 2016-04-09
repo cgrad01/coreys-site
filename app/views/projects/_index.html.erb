@@ -1,42 +1,35 @@
 <div id="projects-container">
   <a name="projects" id="projects"></a><h2 id="projects-header">PROJECTS</h2>
-  <div id="projects-row" class="row">
-    <div id="project-square" class="col-xs-6">
-      <div id="top-row" class="thumbnail">
-        <img id="project-image" src=<%= image_url('juke-thumbnail-crop.png') %> >
-        <div>
-          <h3 class="caption">Juke</h3>
-        </div>
+  <div id="projects-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#projects-carousel" data-slide-to="0" class="active"></li>
+      <li data-target="#projects-carousel" data-slide-to="1"></li>
+      <li data-target="#projects-carousel" data-slide-to="2"></li>
+      <li data-target="#projects-carousel" data-slide-to="3"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="http://s22.postimg.org/66konglu9/cropped_roof.png" alt="pano">
+      </div>
+      <div class="item">
+        <img src=<%= image_url('juke-thumbnail-crop.png') %> alt="juke">
+      </div>
+      <div class="item">
+        <img src=<%= image_url('corey-headshot-crop.png') %> alt="personal page">
+      </div>
+      <div class="item">
+        <img src=<%= image_url('stack-overflow.png') %> alt="stack overflow">
       </div>
     </div>
 
-    <div id="project-square" class="col-xs-6">
-      <div id="top-row" class="thumbnail">
-        <img id="project-image" src=<%= image_url('corey-headshot-crop.png') %> >
-        <div>
-          <h3 class="caption">Personal Page</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="projects-row" class="row">
-    <div id="project-square" class="col-xs-6">
-      <div class="thumbnail">
-        <img id="project-image" src=<%= image_url('stack-overflow.png') %>>
-        <div>
-          <h3 class="caption">Stack Overflow Clone</h3>
-        </div>
-      </div>
-    </div>
-
-    <div id="project-square" class="col-xs-6">
-      <div class="thumbnail">
-        <img id="project-image" src=<%= image_url('stack-overflow.png') %>>
-        <div>
-          <h3 class="caption">Stack Overflow Clone</h3>
-        </div>
-      </div>
-    </div>
+    <a class="left carousel-control" href="#projects-carousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#projects-carousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 </div>
