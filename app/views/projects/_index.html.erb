@@ -1,5 +1,4 @@
 <div id="projects-container">
-  <h1></h1>
   <a name="projects" id="projects"></a><h2 id="projects-header">PROJECTS</h2>
   <div id="projects-carousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -12,6 +11,10 @@
     <div class="carousel-inner" role="listbox">
       <div class="item active">
         <img src=<%= $corey.projects[0].image %> alt="pano">
+        <div class="carousel-caption">
+          <h3><%= $corey.projects[0].title %></h3>
+          <p><%= $corey.projects[0].description %></p>
+        </div>
       </div>
       <div class="item">
         <img src=<%= image_url('juke-thumbnail-crop.png') %> alt="juke">
