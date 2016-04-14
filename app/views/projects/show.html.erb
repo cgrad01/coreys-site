@@ -1,6 +1,6 @@
 <div class="container login">
-  <h2><%= @project.title %></h2>
-  <h4><%= @project.date %></h4>
+  <h2><%= @project.title %> - <%= @project.date %> </h2>
+  <h4> <%= link_to @project.url, @project.url %> (Github - <%=link_to @project.github, @project.github%>)</h4>
   <body><%= @project.description %></body>
   <p><%= link_to "Home", root_path %></p>
 </div>
