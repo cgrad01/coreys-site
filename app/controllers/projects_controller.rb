@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+
   def new
   end
 
@@ -30,6 +31,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    render layout: false
   end
 
   def destroy
