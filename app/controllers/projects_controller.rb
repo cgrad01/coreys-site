@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+
   def new
   end
 
@@ -26,6 +27,11 @@ class ProjectsController < ApplicationController
       @errors = @project.errors.full_messages
       render :edit
     end
+  end
+
+  def show
+    @project = Project.find(params[:id])
+    render layout: false
   end
 
   def destroy
