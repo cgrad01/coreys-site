@@ -4,18 +4,31 @@
     <div class="col-md-6">
       <h3 id="post-type">Cultural Posts</h3>
         <% Post.filter_posts("Culture").each do |post| %>
-          <p id="post-link"><%= link_to "#{post.title} - #{post.date}", post_path(post)%></p>
-          <p id="post-content"><%= post.content[0..100] %>... <%= link_to "read more", post_path(post) %></p>
+          <p id="post-link"><%= link_to "#{post.title} - #{post.date}", "#", {"data-toggle": "modal", "data-target": "#postModal", href: post_path(post)}%></p>
+          <p id="post-content"><%= post.content[0..100] %>... <%= link_to "read more", post_path(post), {"data-toggle": "modal", "data-target": "#postModal", href: post_path(post)} %></p>
         <% end %>
     </div>
 
     <div class="col-md-6">
       <h3 id="post-type">Technical Posts</h3>
         <% Post.filter_posts("Technical").each do |post| %>
-          <p id="post-link"><%= link_to "#{post.title} - #{post.date}", post_path(post)%></p>
-          <p id="post-content"><%= post.content[0..100] %>... <%= link_to "read more", post_path(post) %></p>
+          <p id="post-link"><%= link_to "#{post.title} - #{post.date}", post_path(post), {"data-toggle": "modal", "data-target": "#postModal", href: post_path(post)}%></p>
+          <p id="post-content"><%= post.content[0..100] %>... <%= link_to "read more", post_path(post), {"data-toggle": "modal", "data-target": "#postModal", href: post_path(post)} %></p>
         <% end %>
       </ul>
     </div>
   </div>
+
+<!-- modal -->
+
+  <div class="modal fade" id="postModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-body">
+          ...
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>
