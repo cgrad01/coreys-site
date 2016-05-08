@@ -1,13 +1,11 @@
 @import master
 
-.jumbotron
-  background-image: url("http://s22.postimg.org/66konglu9/cropped_roof.png")
-  background-repeat: no-repeat
-  background-size: 100%
-  background-position: right bottom
-  height: 1000px
-  margin: 0px
-  padding: 0px
+.img-container
+  position: relative
+  width: 100%
+
+#cover-photo
+  width: 100%
 
 #blurb
   font-size: $med-text
@@ -15,13 +13,9 @@
   color: $cyan
   padding-top: 20%
   opacity: 0.0
+  position: inline
 
 #shadesquare
+  position: fixed
   height: 100%
   width: 100%
-
-#shadesquare:hover
-  background: $grey
-  opacity: 0.8
-  #blurb
-    opacity: 1.0
