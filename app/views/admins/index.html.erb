@@ -1,5 +1,9 @@
 <a name="about" id="about"></a><h2>Welcome</h2>
 <%= render 'about' %>
-<%= render 'projects/index' %>
-<%= render 'posts/index' %>
+<% if $corey.projects.first %>
+  <%= render 'projects/index' %>
+<% end %>
+<% if $corey.posts.first %>
+  <%= render 'posts/index' %>
+<% end %>
 <%= render 'shared/resume' %>
