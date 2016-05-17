@@ -5,8 +5,12 @@
     </div>
       <ul class="nav nav-pills nav-justified" role="tablist">
         <li role="presentation"><a id="link" href="#about">About</a></li>
+        <% if $corey.projects[0] %>
         <li role="presentation"><a id="link" href="#projects">Projects</a></li>
+        <% end %>
+        <% if $corey.posts[0] %>
         <li role="presentation"><a id="link" href="#blog">Blog</a></li>
+        <% end %>
         <li role="presentation"><a id="link" href="#resume">Resume</a></li>
       </ul>
   </div>
