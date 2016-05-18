@@ -4,5 +4,5 @@ class Admin < ActiveRecord::Base
   has_secure_password
 
   validates :email, presence: true, uniqueness: true
-  validates :fullname, :password, presence: true
+  validates :fullname, :password, presence: true, on: :create
 end
